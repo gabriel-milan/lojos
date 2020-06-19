@@ -1,0 +1,9 @@
+# In order to run this, do:
+# docker-compose -f swarm_template.yml up
+version: "3.1"
+
+services:
+  worker:
+    image: rq-worker
+    restart: unless-stopped
+    network_mode: "host"

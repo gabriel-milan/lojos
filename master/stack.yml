@@ -1,0 +1,14 @@
+# In order to run this, do:
+# docker-compose -f stack.yml up
+version: "3.1"
+
+services:
+  redis:
+    image: redis
+    restart: unless-stopped
+    network_mode: "host"
+
+  dashboard:
+    image: eoranged/rq-dashboard
+    restart: unless-stopped
+    network_mode: "host"
