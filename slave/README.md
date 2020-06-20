@@ -11,7 +11,7 @@ Arguments MASTER_URL and QUEUE are optional, defaults are `localhost` and `defau
 After building it, you can edit the `swarm_template.yml` file in order to fit your preferences. Then you can do:
 
 ```
-docker-compose up -d --scale worker=<n-workers>
+docker-compose -f swarm_template.yml up -d --scale worker=<n-workers>
 ```
 
 Replacing `<n-workers>` with the number of workers you want for this queue.
